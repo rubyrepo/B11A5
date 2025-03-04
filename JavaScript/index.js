@@ -76,8 +76,11 @@ function disableButtonOnClick(buttonId, divId, commentTextDiv) {
         commentDiv.style.borderRadius = '10px'
         commentDiv.style.fontWeight = '200'
 
+        let now = new Date();
+        let time = now.toLocaleTimeString(); 
+
         const commentText = document.getElementById(commentTextDiv).innerHTML
-        commentDiv.textContent = "You have completed the task: " + commentText;
+        commentDiv.textContent = "You have completed the task: " + commentText + " at " + time;
         let asideSectionTaskComment = document.getElementById('AsideSectionTaskComment');
         asideSectionTaskComment.appendChild(commentDiv);
 
