@@ -29,11 +29,7 @@ function changeBackgroundColor() {
 document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
 
 // reloding the page to clear history
-function reloadHomePage() {
-    location.reload(); // Reloads the current page
-}
 
-document.getElementById("clear_history").addEventListener('click', reloadHomePage)
 
 
 
@@ -66,27 +62,26 @@ function disableButtonOnClick(buttonId, divId, commentTextDiv) {
     document.getElementById(buttonId).addEventListener('click', function(event) {
         event.target.disabled = true;
         event.target.style.color = 'white';
-        const btnBgColor = document.getElementById(divId)
+        const btnBgColor = document.getElementById(divId);
         btnBgColor.style.backgroundColor = '#ced6ff';
 
-        let commentDiv = document.createElement('div')
-        commentDiv.style.marginBottom = '10px'
-        commentDiv.style.padding = '20px'
-        commentDiv.style.background = '#f4f7ff'
-        commentDiv.style.borderRadius = '10px'
-        commentDiv.style.fontWeight = '200'
+        let commentDiv = document.createElement('div');
+        commentDiv.classList.add('dynamic-comment'); // Add a class to identify dynamically added comments
+        commentDiv.style.marginBottom = '10px';
+        commentDiv.style.padding = '20px';
+        commentDiv.style.background = '#f4f7ff';
+        commentDiv.style.borderRadius = '10px';
+        commentDiv.style.fontWeight = '200';
 
         let now = new Date();
-        let time = now.toLocaleTimeString(); 
+        let time = now.toLocaleTimeString();
 
-        const commentText = document.getElementById(commentTextDiv).innerHTML
+        const commentText = document.getElementById(commentTextDiv).innerHTML;
         commentDiv.textContent = "You have completed the task: " + commentText + " at " + time;
         let asideSectionTaskComment = document.getElementById('AsideSectionTaskComment');
         asideSectionTaskComment.appendChild(commentDiv);
-
-
     });
-} 
+}
 
 document.getElementById('btn_task_01').addEventListener('click', taskBtnActivity)
 document.getElementById('btn_task_01').addEventListener('click', disableButtonOnClick('btn_task_01','btn_task_01_div','title_comment_01'))
@@ -105,3 +100,10 @@ document.getElementById('btn_task_05').addEventListener('click', disableButtonOn
 
 document.getElementById('btn_task_06').addEventListener('click', taskBtnActivity)
 document.getElementById('btn_task_06').addEventListener('click', disableButtonOnClick('btn_task_06','btn_task_06_div','title_comment_06'))
+
+function clearDynamicComments() {
+    const dynamicComments = document.querySelectorAll('.dynamic-comment'); // Select all comments with this class
+    dynamicComments.forEach(comment => comment.remove()); // Remove each dynamically added comment
+}
+
+document.getElementById('clear_history').addEventListener('click', clearDynamicComments);
