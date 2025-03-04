@@ -65,9 +65,9 @@ function taskBtnActivity(){
 function disableButtonOnClick(buttonId, divId, commentTextDiv) {
     document.getElementById(buttonId).addEventListener('click', function(event) {
         event.target.disabled = true;
-        event.target.style.color = 'gray';
+        event.target.style.color = 'white';
         const btnBgColor = document.getElementById(divId)
-        btnBgColor.style.backgroundColor = 'lightgray';
+        btnBgColor.style.backgroundColor = '#ced6ff';
 
         let commentDiv = document.createElement('div')
         commentDiv.style.marginBottom = '10px'

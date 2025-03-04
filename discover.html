@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover</title>
+    <title>DevBoard - Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-[#f4f7ff]">
+    <div class="mx-60 mt-5 p-5">
+        <header class="flex justify-between bg-white p-5 rounded-xl items-center mb-8">
+            <div class="flex items-center">
+                <img class="h-10" src="assets/logo.png" alt="Logo">
+                <p class="text-3xl pl-2">Dev<b>Board</b></p>
+            </div>
+            <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                Back to Desk
+            </a>
+        </header>
+
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Blogs</h1>
+        </div>
+
+        <div class="space-y-8">
+            <!-- Question 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Question-1: What are the different ways to select an element in the DOM?</h2>
+                <p class="text-gray-600">
+                    there are many ways to select a an element using javascript dom, some of them are 
+                    getElementById(), getElementsByTagName(), querySelector(), getElementsByClassName(),                 </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Question-2: What is the difference between innerHTML, innerText, and textContent?</h2>
+                <p class="text-gray-600">
+                    inner html is just html code. innet text is what client see, and text content is inner html and inner text together
+                </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Question-3: What is event delegation in the DOM?</h2>
+                <p class="text-gray-600">
+                    by using event delegation we can save more effort with just placing it into parent. we can listen all the child without placing listener to every child.
+                </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Question-4: What is event bubbling in the DOM?</h2>
+                <p class="text-gray-600">
+                    Event bubbling is a concept where an event triggered on a nested element first runs its handler
+                    and then propagates up to its parent elements.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
