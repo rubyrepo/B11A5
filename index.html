@@ -1,175 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevBoard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
-    <div class="max-w-6xl mx-auto p-4">
-        <!-- Header -->
-        <div class="bg-white rounded-lg p-4 mb-4 flex justify-between items-center shadow">
-            <div class="flex items-center">
-                <div class="bg-blue-600 text-white p-2 rounded mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5z" />
-                        <path d="M5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5z" />
-                        <path d="M11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5z" />
-                        <path d="M11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                    </svg>
-                </div>
-                <span class="font-bold text-xl">DevBoard</span>
-            </div>
-            <div class="flex items-center">
-                <div class="bg-blue-100 text-blue-800 font-bold rounded-full px-3 py-1 mr-2 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    23
-                </div>
-                <div class="h-8 w-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500"></div>
-            </div>
+    <!-- tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- google font: poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: poppins, sans-serif" class="bg-[#f4f7ff]">
+    <header>
+      <nav class="bg-white flex justify-between mx-60 mt-5 p-5 rounded-xl">
+        <div class="flex justify-between items-center">
+          <img src="./assets/logo.png" alt="" />
+          <p class="text-3xl pl-2">Dev<b>Board</b></p>
         </div>
-
-        <!-- Main Content -->
-        <div class="bg-white rounded-lg p-4 shadow mb-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Tasks Counter -->
-                <div class="flex items-center p-4">
-                    <div class="bg-blue-100 p-2 rounded mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-gray-500">Task Assigned</p>
-                        <p class="font-bold text-xl">6</p>
-                    </div>
-                </div>
-                
-                <!-- Announcement Banner -->
-                <div class="bg-blue-500 text-white p-4 rounded-lg flex items-center col-span-1 md:col-span-1">
-                    <div class="mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <span class="text-lg font-medium">Discover Something New Today!</span>
-                </div>
-                
-                <!-- Date Display -->
-                <div class="flex justify-end items-center p-4">
-                    <div class="bg-green-100 p-2 rounded mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <span class="font-medium">Tue Feb 25 2025</span>
-                </div>
-            </div>
+        <div class="flex justify-between items-center">
+          <div
+            class="flex justify-between items-center bg-[#f4f7ff] p-3 rounded-3xl"
+          >
+            <img src="./assets/checkbox.png" alt="" />
+            <p class="ml-3 text-2xl font-bold">23</p>
+          </div>
+          <div
+            class="bg-[#f4f7ff] ml-3 p-1 items-center text-center rounded-full"
+          >
+            <button class="cursor-pointer">
+              <img
+                class="items-center text-center pt-1 px-1"
+                src="./assets/theme-btn.png"
+                alt=""
+              />
+            </button>
+          </div>
         </div>
-
-        <!-- Activity Log -->
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-medium text-gray-700">Task Board</h2>
-            <div class="flex items-center">
-                <div class="flex items-center mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="text-gray-600">Activity Log</span>
-                </div>
-                <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Clear History</button>
+      </nav>
+    </header>
+    <main class="grid grid-cols-5 grid-rows-5">
+      <section class="bg-white ml-60 mt-5 p-5 rounded-xl col-span-4 mr-48">
+        <!-- 3 flex  -->
+        <!-- flex prent -->
+        <div class="flex columns-4 gap-5">
+          <!-- child 01 -->
+          <div
+            class="flex justify-center bg-[#f4f7ff] p-5 rounded-xl items-center"
+          >
+            <div class="bg-white p-3 rounded-full items-center">
+              <img class="text-center" src="./assets/checkbox.png" alt="" />
             </div>
+            <div class="ml-3">
+              <p>Task Assigned </p>
+              <b class="text-2xl">06</b>
+            </div>
+          </div>
+          <!-- child 02 -->
+          <a href="./discover.html">
+            <div
+              class="col-span-2 bg-gradient-to-tr from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8] flex rounded-xl p-5 pr-40 pl-20 items-center mr-"
+            >
+              <img src="./assets/board.png" alt="" />
+              <p class="text-2xl font-normal text-white ml-5">
+                Discover Something <br />New Today!
+              </p>
+            </div>
+          </a>
+
+          <!-- child 03 -->
+          <div
+            class="bg-[#f4f7ff] flex justify-center items-center p-5 rounded-xl"
+          >
+            <div class="bg-white p-3 rounded-full">
+              <img src="./assets/calender.png" alt="" />
+            </div>
+            <div class="px-5">
+              <p id="Weekday_accronym"></p>
+              <b class="" id="todayDate"></b>
+            </div>
+          </div>
         </div>
-
-        <!-- Task Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Task Card 1 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Shop Ease</p>
-                <h3 class="font-bold text-lg mb-2">Fix Mobile Button Issue</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">21 March 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+        <hr class="border-dashed text-gray-300 my-5" />
+        <!-- grid for the cards -->
+        <div class="grid grid-cols-3 grid-rows-2 gap-10">
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
+            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="bg-white p-2 rounded-md overflow-hidden">
+                Debug using Chrome DevTools, check for overlappin
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
 
-            <!-- Task Card 2 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Soft Pay</p>
-                <h3 class="font-bold text-lg mb-2">Add Pay Success Modal</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">25 March 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">CloudSync</p>
+            <h3 class="text-xl mb-3">Add Dark Mode</h3>
+            <p class="bg-white p-2 rounded-md">
+                Store the user's preference in localStorage, update CSS varia
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
 
-            <!-- Task Card 3 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Meta</p>
-                <h3 class="font-bold text-lg mb-2">Add new reaction 👍</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">31 March 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">SwiftPay</p>
+            <h3 class="text-xl mb-3">Optimize  Home page</h3>
+            <p class="bg-white p-2 rounded-md">
+                Keep it clean and visually appealing with a simple lay..
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
 
-            <!-- Task Card 4 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Programming Hero</p>
-                <h3 class="font-bold text-lg mb-2">Fix Video Loading Issue</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">21 March 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
+            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="bg-white p-2 rounded-md">
+                Debug using Chrome DevTools, check for overlappin
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
 
-            <!-- Task Card 5 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Google LLC</p>
-                <h3 class="font-bold text-lg mb-2">Integrate AI search</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">01 April 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
+            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="bg-white p-2 rounded-md">
+                Debug using Chrome DevTools, check for overlappin
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
 
-            <!-- Task Card 6 -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <p class="text-gray-500 text-sm mb-1">Polygon Tech</p>
-                <h3 class="font-bold text-lg mb-2">Review Ami Probashi Site</h3>
-                <p class="text-gray-500 text-sm mb-4">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500 text-xs">Deadline</p>
-                        <p class="font-medium">5 May 2025</p>
-                    </div>
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md">Completed</button>
-                </div>
+          <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
+            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
+            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="bg-white p-2 rounded-md">
+                Debug using Chrome DevTools, check for overlappin
+            </p>
+            <hr class="border-dashed text-gray-300 my-5" />
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Deadline</p>
+                <b>21 March 2025</b>
+              </div>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
+                <button class="text-white">Completed</button>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</body>
+      </section>
+      <aside class="mr-60 mt-5 p-5 bg-white rounded-xl -ml-44">
+        <div class="flex flex-col items-center">
+            <div class="flex justify-center items-center m-4">
+                <img class="mr-4" src="./assets/activity.png " alt="">
+                <p>Activity Log</p>
+            </div>
+            <button class="mt-2 bg-[#3752fd] p-2 rounded-md text-white">Clear History</button>
+        </div>
+        <hr class="border-dashed text-gray-300 my-5" />
+
+      </aside>
+    </main>
+
+    <script src="./JavaScript/index.js"></script>
+  </body>
 </html>
