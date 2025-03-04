@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <body style="font-family: poppins, sans-serif" class="bg-[#f4f7ff]">
+  <body style="font-family: Poppins, sans-serif; background-color: #f4f7ff;">
     <header>
       <nav class="bg-white flex justify-between mx-60 mt-5 p-5 rounded-xl">
         <div class="flex justify-between items-center">
@@ -26,12 +26,12 @@
             class="flex justify-between items-center bg-[#f4f7ff] p-3 rounded-3xl"
           >
             <img src="./assets/checkbox.png" alt="" />
-            <p class="ml-3 text-2xl font-bold">23</p>
+            <p class="ml-3 text-2xl font-bold" id="completed_task_show">23</p>
           </div>
           <div
             class="bg-[#f4f7ff] ml-3 p-1 items-center text-center rounded-full"
           >
-            <button class="cursor-pointer">
+            <button class="cursor-pointer" id="changeColorBtn">
               <img
                 class="items-center text-center pt-1 px-1"
                 src="./assets/theme-btn.png"
@@ -56,7 +56,7 @@
             </div>
             <div class="ml-3">
               <p>Task Assigned </p>
-              <b class="text-2xl">06</b>
+              <b class="text-2xl" id="AssaignedTaskProgress">06</b>
             </div>
           </div>
           <!-- child 02 -->
@@ -66,7 +66,7 @@
             >
               <img src="./assets/board.png" alt="" />
               <p class="text-2xl font-normal text-white ml-5">
-                Discover Something <br />New Today!
+                Discover Something New Today!
               </p>
             </div>
           </a>
@@ -89,7 +89,7 @@
         <div class="grid grid-cols-3 grid-rows-2 gap-10">
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
             <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
-            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <h3 class="text-xl mb-3" id="title_comment_01">Fix Mobile Button Issue</h3>
             <p class="bg-white p-2 rounded-md overflow-hidden">
                 Debug using Chrome DevTools, check for overlappin
             </p>
@@ -99,15 +99,15 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_01_div">
+                <button class="text-white" id="btn_task_01">Completed</button>
               </div>
             </div>
           </div>
 
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
             <p class="rounded-md bg-white p-2 my-4 mr-48">CloudSync</p>
-            <h3 class="text-xl mb-3">Add Dark Mode</h3>
+            <h3 class="text-xl mb-3" id="title_comment_02">Add Dark Mode</h3>
             <p class="bg-white p-2 rounded-md">
                 Store the user's preference in localStorage, update CSS varia
             </p>
@@ -117,15 +117,15 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_02_div">
+                <button class="text-white" id="btn_task_02">Completed</button>
               </div>
             </div>
           </div>
 
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
             <p class="rounded-md bg-white p-2 my-4 mr-48">SwiftPay</p>
-            <h3 class="text-xl mb-3">Optimize  Home page</h3>
+            <h3 class="text-xl mb-3"id="title_comment_03">Optimize  Home page</h3>
             <p class="bg-white p-2 rounded-md">
                 Keep it clean and visually appealing with a simple lay..
             </p>
@@ -135,17 +135,17 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_03_div">
+                <button class="text-white" id="btn_task_03">Completed</button>
               </div>
             </div>
           </div>
 
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
-            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
-            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
-            <p class="bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlappin
+            <p class="rounded-md bg-white p-2 my-4 mr-58">Meta</p>
+            <h3 class="text-xl mb-3">Add new emoji 🤲</h3>
+            <p class="bg-white p-2 rounded-md" id="title_comment_04">
+                add emoji to message option and in comment
             </p>
             <hr class="border-dashed text-gray-300 my-5" />
             <div class="flex justify-between items-center">
@@ -153,17 +153,17 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_04_div">
+                <button class="text-white" id="btn_task_04">Completed</button>
               </div>
             </div>
           </div>
 
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
-            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
-            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="rounded-md bg-white p-2 my-4 mr-42">Google LLC</p>
+            <h3 class="text-xl mb-3" id="title_comment_05">Integrate OpenAI API </h3>
             <p class="bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlappin
+                make api integration in you latest project
             </p>
             <hr class="border-dashed text-gray-300 my-5" />
             <div class="flex justify-between items-center">
@@ -171,17 +171,17 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_05_div">
+                <button class="text-white" id="btn_task_05">Completed</button>
               </div>
             </div>
           </div>
 
           <div class="bg-[#f4f7ff] rounded-xl p-4 col-span-1">
-            <p class="rounded-md bg-white p-2 my-4 mr-48">ShopEase</p>
-            <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+            <p class="rounded-md bg-white p-2 my-4 mr-48">Glassdoar</p>
+            <h3 class="text-xl mb-3" id="title_comment_06">Improve Job searching </h3>
             <p class="bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlappin
+                niche select for make job searching is more accurate
             </p>
             <hr class="border-dashed text-gray-300 my-5" />
             <div class="flex justify-between items-center">
@@ -189,20 +189,20 @@
                 <p>Deadline</p>
                 <b>21 March 2025</b>
               </div>
-              <div class="bg-[#3752fd] py-2 px-4 rounded-sm">
-                <button class="text-white">Completed</button>
+              <div class="bg-[#3752fd] py-2 px-4 rounded-sm" id="btn_task_06_div">
+                <button class="text-white" id="btn_task_06">Completed</button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <aside class="mr-60 mt-5 p-5 bg-white rounded-xl -ml-44">
+      <aside class="mr-60 mt-5 p-5 bg-white rounded-xl -ml-44" id="AsideSectionTaskComment">
         <div class="flex flex-col items-center">
             <div class="flex justify-center items-center m-4">
                 <img class="mr-4" src="./assets/activity.png " alt="">
                 <p>Activity Log</p>
             </div>
-            <button class="mt-2 bg-[#3752fd] p-2 rounded-md text-white">Clear History</button>
+            <button class="mt-2 bg-[#3752fd] p-2 rounded-md text-white" id="clear_history">Clear History</button>
         </div>
         <hr class="border-dashed text-gray-300 my-5" />
 
